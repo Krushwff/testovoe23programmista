@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление нового сообщения</title>
+</head>
+<body>
+<h1>Добавление нового сообщения</h1>
+<form action="add_message.php" method="post">
+    <p>
+        <label for="title">Заголовок:</label>
+        <input type="text" name="title" id="title">
+    </p>
+    <p>
+        <label for="author">Автор:</label>
+        <input type="text" name="author" id="author">
+    </p>
+    <p>
+        <label for="summary">Краткое содержание:</label>
+        <textarea name="summary" id="summary"></textarea>
+    </p>
+    <p>
+        <label for="content">Полное содержание:</label>
+        <textarea name="content" id="content"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Добавить">
+    </p>
+</form>
+
+<a href="index.php">Вернуться к списку сообщений</a>
+</body>
+</html>

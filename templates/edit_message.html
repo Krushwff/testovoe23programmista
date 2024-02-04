@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование сообщения</title>
+</head>
+<body>
+<h1>Редактирование сообщения</h1>
+<form action="edit_message.php?id=<?php echo $id ?>" method="post">
+    <p>
+        <label for="title">Заголовок:</label>
+        <input type="text" name="title" id="title" value="<?php echo $message['title'] ?>">
+    </p>
+    <p>
+        <label for="author">Автор:</label>
+        <input type="text" name="author" id="author" value="<?php echo $message['author'] ?>">
+    </p>
+    <p>
+        <label for="summary">Краткое содержание:</label>
+        <textarea name="summary" id="summary"><?php echo $message['summary'] ?></textarea>
+    </p>
+    <p>
+        <label for="content">Полное содержание:</label>
+        <textarea name="content" id="content"><?php echo $message['content'] ?></textarea>
+    </p>
+    <p>
+        <input type="submit" name="submit" value="Сохранить">
+    </p>
+</form>
+
+<a href="message.php?id=<?php echo $message['id'] ?>">Вернуться к сообщению</a>
+</body>
+</html>
